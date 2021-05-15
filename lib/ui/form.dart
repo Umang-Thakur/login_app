@@ -63,6 +63,7 @@ class _LoginFormState extends State<LoginForm> {
         }
 
         return Form(
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           child: Column(children: [
             Container(
               height: 190.0,
@@ -93,7 +94,7 @@ class _LoginFormState extends State<LoginForm> {
                 maxLength: 10,
                 validator: (String value) {
                   if (value.isEmpty) {
-                    return 'Please Enter Password';
+                    return 'Enter Your Phone Number';
                   }
                   return null;
                 },
