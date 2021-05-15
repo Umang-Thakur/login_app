@@ -146,18 +146,19 @@ class _LoginFormState extends State<LoginForm> {
                         borderRadius: BorderRadius.all(Radius.circular(20)))),
               ),
             ),
+            Expanded(child: Container()),
             Container(
-              height: 10,
+              height: 30,
               child: state is LoginLoading ? CircularProgressIndicator() : null,
             ),
-            Expanded(child: Container()),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('New User ? '),
                 TextButton(onPressed: _signup, child: Text('Create Account'))
               ],
-            )
+            ),
+            Expanded(child: Container()),
           ]),
         );
       },

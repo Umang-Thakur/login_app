@@ -77,7 +77,7 @@ class AuthRepository {
     @required String password,
   }) async {
     AuthResponse response = await getUser(phone_no, password);
-    if (response.results.token != "") {
+    if (response.error == "") {
       this.user = response.results;
       return this.user.token;
     }
